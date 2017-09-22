@@ -233,8 +233,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  lerpMultiplier: 1
-  keyInputs: 77000000610000007300000064000000
+  acceleration: 1
+  friction: 0.5
+  lerpMultiplier: 0.75
+  keyInputs: 7700000061000000730000006400000032010000
+  isPressedAction: 0
 --- !u!1 &360499088
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,8 +613,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  lerpMultiplier: 1
-  keyInputs: 11010000140100001201000013010000
+  acceleration: 1
+  friction: 0.5
+  lerpMultiplier: 0.75
+  keyInputs: 1101000014010000120100001301000031010000
+  isPressedAction: 0
 --- !u!54 &1257604002
 Rigidbody:
   m_ObjectHideFlags: 0
