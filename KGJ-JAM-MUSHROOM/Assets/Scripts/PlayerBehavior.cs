@@ -14,6 +14,7 @@ public class PlayerBehavior : MonoBehaviour {
     private Vector3 dirVel = new Vector3();
     private float m_speed = 0f;
     private bool m_moving = false;
+    private Vector3 lookdirection = new Vector3(1, 0, 1);
 
     // Use this for initialization
     void Start ()
@@ -31,18 +32,35 @@ public class PlayerBehavior : MonoBehaviour {
 
     private void MovementControls()
     {
+        const float minDirToLook = 0.25f;
         // Movement input
 
         // up & down
         if (Input.GetKey(keyInputs[0]))
         {
-            dirVel.z = 1;
+            dirVel.z += Time.deltaTime;
+            if (dirVel.z >= 1)
+            {
+                dirVel.z = 1;
+            }
             m_moving = true;
+            if (dirVel.z > minDirToLook)
+            {
+                lookdirection = new Vector3(dirVel.x * 10, transform.position.y - 1.5f, dirVel.z * 10);
+            }
         }
         else if (Input.GetKey(keyInputs[2]))
         {
-            dirVel.z = -1;
+            dirVel.z -= Time.deltaTime;
+            if (dirVel.z <= -1)
+            {
+                dirVel.z = -1;
+            }
             m_moving = true;
+            if (dirVel.z < -minDirToLook)
+            {
+                lookdirection = new Vector3(dirVel.x * 10, transform.position.y - 1.5f, dirVel.z * 10);
+            }
         }
         else
         {
@@ -55,13 +73,29 @@ public class PlayerBehavior : MonoBehaviour {
         // left & right
         if (Input.GetKey(keyInputs[3]))
         {
-            dirVel.x = 1;
+            dirVel.x += Time.deltaTime;
+            if (dirVel.x >= 1)
+            {
+                dirVel.x = 1;
+            }
             m_moving = true;
+            if (dirVel.x > minDirToLook)
+            {
+                lookdirection = new Vector3(dirVel.x * 10, transform.position.y - 1.5f, dirVel.z * 10);
+            }
         }
         else if (Input.GetKey(keyInputs[1]))
         {
-            dirVel.x = -1;
+            dirVel.x -= Time.deltaTime;
+            if (dirVel.x <= -1)
+            {
+                dirVel.x = -1;
+            }
             m_moving = true;
+            if (dirVel.x < -minDirToLook)
+            {
+                lookdirection = new Vector3(dirVel.x * 10, transform.position.y - 1.5f, dirVel.z * 10);
+            }
         }
         else
         {
@@ -76,7 +110,7 @@ public class PlayerBehavior : MonoBehaviour {
         isPressedAction = Input.GetKey(keyInputs[4]);
 
         // Apply movement
-        Vector3 pos = transform.localPosition;
+        Vector3 pos = GetComponent<Rigidbody>().position;
         Vector3 toPos = new Vector3(
             pos.x + (m_speed * dirVel.x),
             pos.y,
@@ -84,6 +118,9 @@ public class PlayerBehavior : MonoBehaviour {
         );
         Vector3 lerpPos = Vector3.Lerp(pos, toPos, (Time.deltaTime * lerpMultiplier));
         GetComponent<Rigidbody>().MovePosition(lerpPos);
+
+        // look direction
+        transform.rotation = Quaternion.LookRotation(lookdirection);
     }
 
     private void MovementHandler()
