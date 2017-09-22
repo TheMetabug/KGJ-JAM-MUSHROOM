@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Mushroom_Deposit : MonoBehaviour {
-    float searchTimer = 4.0f;
+    public float searchTimer = 240.1f;
 
     public Transform prefab;
 	// Use this for initialization
@@ -19,21 +19,26 @@ public class Mushroom_Deposit : MonoBehaviour {
 	}
     void OnTriggerStay(Collider other)
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (other.GetComponent<PlayerBehavior>().isPressedAction)
         {
             SearchingForMushrooms(other.gameObject);
         }
+
     }
     void SearchingForMushrooms(GameObject other)
     {
-        while(searchTimer > 0)
+        while(searchTimer < 0)
         {
-            searchTimer -= 0.1f;
+
+            if (prefab != null)
+            {
+                Instantiate(prefab, other.transform, false);
+            }
+            searchTimer = 0;
         }
-        if(prefab != null)
-        {
-            Instantiate(prefab, other.transform, false);
-        }
+        if (searchTimer > 0)
+        searchTimer -= 1.0f;
+        
     }
 
     
