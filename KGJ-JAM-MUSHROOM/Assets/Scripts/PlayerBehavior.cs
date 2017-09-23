@@ -17,10 +17,9 @@ public class PlayerBehavior : MonoBehaviour {
     public bool hasPunched = false;
     public bool isSearching = false;
     public bool isTouchingBush = false;
-
     private Vector3 dirVel = new Vector3();
     private float m_speed = 0f;
-    private float m_moveSpeedModifier = 1;
+    public float m_moveSpeedModifier = 1;
     private bool m_moving = false;
     private Vector3 lookdirection = new Vector3(1, 0, 1);
     public float gatheringSpeedModifier;
@@ -32,7 +31,6 @@ public class PlayerBehavior : MonoBehaviour {
         {
             gatheringSpeedModifier = 1.0f;
             m_defaultMoveSpeedModifier = 1.0f;
-
         }
         else if(gameObject.tag == "Player2")
         {
@@ -225,6 +223,10 @@ public class PlayerBehavior : MonoBehaviour {
     }
     public void getShroom(Transform mushroom)
     {
+        if(mushroom.tag == "Chantarelle")
+        {
+            m_moveSpeedModifier = m_defaultMoveSpeedModifier * 0.8f;
+        }
         if(mushroom.tag == "Amanita")
         {
             StartCoroutine("Amanita");
