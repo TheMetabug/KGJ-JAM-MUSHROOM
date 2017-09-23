@@ -19,7 +19,10 @@ public class PunchBehaviour : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-	}
+
+        float scale = transform.localScale.x + 0.35f;
+        transform.localScale = new Vector3(scale, transform.localScale.y, transform.localScale.z);
+    }
 
     void OnTriggerEnter(Collider col)
     {
