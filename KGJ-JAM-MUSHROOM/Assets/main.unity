@@ -3446,8 +3446,9 @@ GameObject:
   - component: {fileID: 1452725012}
   - component: {fileID: 1452725011}
   - component: {fileID: 1452725010}
+  - component: {fileID: 1452725014}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: PlayArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3518,6 +3519,21 @@ Transform:
   m_Father: {fileID: 230442011}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1452725014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452725009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a33114d41c1da94ea051fa081943273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mushroom_Deposit: {fileID: 4199584457667238, guid: 1949ff520f49348418040a4c38e9140b,
+    type: 2}
+  Chantarelle: {fileID: 4872772278361986, guid: 97641b88c5dc39f4b8125f616037d3c6,
+    type: 2}
 --- !u!1 &1806490248
 GameObject:
   m_ObjectHideFlags: 0
