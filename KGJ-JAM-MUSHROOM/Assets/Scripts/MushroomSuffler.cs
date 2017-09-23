@@ -9,12 +9,13 @@ public class MushroomSuffler : MonoBehaviour {
     public Transform Chantarelle;
     public Transform Amanita;
     public Transform Speed;
+    public Transform Poison;
     void Start ()
     {
         for (int i = 0; i < 10; i++)
         {
             Instantiate(Mushroom_deposit, new Vector3(Random.Range(-12, 12), 2, Random.Range(-5, 20)), new Quaternion(0, 0, 0, 0), transform);
-            int random = Random.Range(0, 2);
+            int random = Random.Range(0, 3);
             if(random == 0)
             {
                 Mushroom_deposit.GetComponent<Mushroom_Deposit>().prefab = Amanita;
@@ -24,6 +25,10 @@ public class MushroomSuffler : MonoBehaviour {
             {
                 Mushroom_deposit.GetComponent<Mushroom_Deposit>().prefab = Speed;
        
+            }
+            else if(random >= 2)
+            {
+                Mushroom_deposit.GetComponent<Mushroom_Deposit>().prefab = Poison;
             }
             
 
