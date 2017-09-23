@@ -29,7 +29,6 @@ public class Mushroom_Deposit : MonoBehaviour {
     {
         while(searchTimer < 0)
         {
-
             if (prefab != null)
             {
                 other.GetComponent<PlayerBehavior>().getShroom(prefab);
@@ -38,7 +37,7 @@ public class Mushroom_Deposit : MonoBehaviour {
             searchTimer = 0;
         }
         if (searchTimer > 0)
-        searchTimer -= 1.0f;
+        searchTimer -= 1.0f * other.GetComponent<PlayerBehavior>().gatheringSpeedModifier;
         
     }
 

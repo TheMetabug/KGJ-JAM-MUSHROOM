@@ -20,11 +20,23 @@ public class PlayerBehavior : MonoBehaviour {
     private float m_moveSpeedModifier = 1;
     private bool m_moving = false;
     private Vector3 lookdirection = new Vector3(1, 0, 1);
-
+    public float gatheringSpeedModifier;
+    public float m_defaultMoveSpeedModifier;
     // Use this for initialization
     void Start ()
     {
-		
+		if(gameObject.tag == "Player1")
+        {
+            gatheringSpeedModifier = 1.0f;
+            m_defaultMoveSpeedModifier = 1.0f;
+
+        }
+        else if(gameObject.tag == "Player2")
+        {
+            gatheringSpeedModifier = 1.5f;
+            m_defaultMoveSpeedModifier = 0.8f;
+        }
+        m_moveSpeedModifier = m_defaultMoveSpeedModifier;
 	}
 	
 	// Update is called once per frame
@@ -198,23 +210,23 @@ public class PlayerBehavior : MonoBehaviour {
     }
     IEnumerator Amanita()
     {
-        m_moveSpeedModifier = 0.5f;
+        m_moveSpeedModifier = 0.5f * m_defaultMoveSpeedModifier;
         yield return new WaitForSeconds(3);
-        m_moveSpeedModifier = 1;
+        m_moveSpeedModifier = m_defaultMoveSpeedModifier;
         yield return null;
     }
     IEnumerator SpeedShroom()
     {
-        m_moveSpeedModifier = 1.5f;
+        m_moveSpeedModifier = 1.5f * m_defaultMoveSpeedModifier;
         yield return new WaitForSeconds(3);
-        m_moveSpeedModifier = 1;
+        m_moveSpeedModifier = m_defaultMoveSpeedModifier;
         yield return null;
     }
     IEnumerator PoisonShroom()
     {
         m_moveSpeedModifier = -1;
         yield return new WaitForSeconds(3);
-        m_moveSpeedModifier = 1;
+        m_moveSpeedModifier = m_defaultMoveSpeedModifier;
         yield return null;
     }
     IEnumerator hitStun()
