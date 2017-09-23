@@ -207,9 +207,9 @@ public class PlayerBehavior : MonoBehaviour {
         {
             transform.position = new Vector3(-15, transform.position.y, transform.position.z);
         }
-        if (transform.position.z >= 18)
+        if (transform.position.z >= 20)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 18);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 20);
         }
         if (transform.position.z <= -10)
         {
@@ -220,6 +220,7 @@ public class PlayerBehavior : MonoBehaviour {
     public void getHit(Vector3 hitPos)
     {
         GetComponent<Rigidbody>().AddForceAtPosition(new Vector3(250f, 0f, 250f), hitPos);
+        GetComponent<AudioSource>().Play();
         StartCoroutine("hitStun");
     }
     public void getShroom(Transform mushroom)
