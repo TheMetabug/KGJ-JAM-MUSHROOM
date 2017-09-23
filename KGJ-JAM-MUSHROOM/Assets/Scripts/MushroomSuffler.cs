@@ -9,7 +9,7 @@ public class MushroomSuffler : MonoBehaviour {
     public Transform Chantarelle;
     void Start ()
     {
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 10; i++)
         {
             Instantiate(Mushroom_Deposit, new Vector3(Random.Range(-12, 12), 2, Random.Range(-5, 20)), new Quaternion(0, 0, 0, 0), transform);
         }

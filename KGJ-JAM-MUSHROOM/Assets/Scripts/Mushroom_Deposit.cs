@@ -32,7 +32,7 @@ public class Mushroom_Deposit : MonoBehaviour {
 
             if (prefab != null)
             {
-                Instantiate(prefab, other.transform, false);
+                Instantiate(prefab,other.transform.position + new Vector3(0,2,0),new Quaternion(0,0,0,0),other.transform);
             }
             searchTimer = 0;
         }

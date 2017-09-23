@@ -6,6 +6,7 @@ public class Parking_lot : MonoBehaviour {
     public GameObject Owner;
     public GameObject prefab;
     public Component[] list;
+    public GameObject canvas;
 	// Use this for initialization
 	void Start () {
 		
@@ -25,10 +26,7 @@ public class Parking_lot : MonoBehaviour {
             {
                 if (transform.tag == "Chantarelle")
                 {
-                    for (int i = 0; i < 1; i++)
-                    {
-                        Instantiate(prefab, new Vector3(Random.Range(0, 100), Random.Range(0, 100), Random.Range(0, 100)), new Quaternion(0, 0, 0, 0), transform);
-                    }
+                    canvas.SetActive(true);
                 }
             }
         }
