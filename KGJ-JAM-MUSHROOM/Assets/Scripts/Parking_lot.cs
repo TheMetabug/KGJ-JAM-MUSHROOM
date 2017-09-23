@@ -7,6 +7,7 @@ public class Parking_lot : MonoBehaviour {
     public GameObject prefab;
     public Component[] list;
     public GameObject canvas;
+    private bool hasWon = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -24,9 +25,11 @@ public class Parking_lot : MonoBehaviour {
             list = other.GetComponentsInChildren<Transform>();
             foreach (Transform transform in list)
             {
-                if (transform.tag == "Chantarelle")
+                if (transform.tag == "Chantarelle" && !hasWon)
                 {
                     canvas.SetActive(true);
+                    GetComponent<AudioSource>().Play();
+                    hasWon = true;
                 }
             }
         }

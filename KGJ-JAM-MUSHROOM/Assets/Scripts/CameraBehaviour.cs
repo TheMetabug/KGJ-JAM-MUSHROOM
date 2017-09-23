@@ -9,7 +9,7 @@ public class CameraBehaviour : MonoBehaviour {
 
     private Vector3 lerpPoint;
     private Vector3 cameraStartPoint;
-    private float offset = 5.0f;
+    private float offset = 7.0f;
 
     // Use this for initialization
     void Start ()
