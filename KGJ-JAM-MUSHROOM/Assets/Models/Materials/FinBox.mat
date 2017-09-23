@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Floor
-  m_Shader: {fileID: 103, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _SUNDISK_HIGH_QUALITY
+  m_Name: FinBox
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -18,7 +18,7 @@ Material:
     - first:
         name: _BackTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7ddcc1e9311d7b349a54d0b8be8460a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -48,7 +48,7 @@ Material:
     - first:
         name: _DownTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7ddcc1e9311d7b349a54d0b8be8460a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -60,21 +60,21 @@ Material:
     - first:
         name: _FrontTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7ddcc1e9311d7b349a54d0b8be8460a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _LeftTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7ddcc1e9311d7b349a54d0b8be8460a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: 7ddcc1e9311d7b349a54d0b8be8460a8, type: 3}
+        m_Scale: {x: 1, y: 1.18}
+        m_Offset: {x: 0.41, y: 0.57}
     - first:
         name: _MetallicGlossMap
       second:
@@ -96,7 +96,7 @@ Material:
     - first:
         name: _RightTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7ddcc1e9311d7b349a54d0b8be8460a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -108,13 +108,10 @@ Material:
     - first:
         name: _UpTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7ddcc1e9311d7b349a54d0b8be8460a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: _AtmosphereThickness
-      second: 1
     - first:
         name: _BumpScale
       second: 1
@@ -129,7 +126,7 @@ Material:
       second: 0
     - first:
         name: _Exposure
-      second: 0.39
+      second: 1
     - first:
         name: _GlossMapScale
       second: 1
@@ -153,7 +150,7 @@ Material:
       second: 0.02
     - first:
         name: _Rotation
-      second: 91
+      second: 1
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -164,12 +161,6 @@ Material:
         name: _SrcBlend
       second: 1
     - first:
-        name: _SunDisk
-      second: 2
-    - first:
-        name: _SunSize
-      second: 0.04
-    - first:
         name: _UVSec
       second: 0
     - first:
@@ -178,16 +169,10 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0, g: 0.2794118, b: 0.038079057, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
-        name: _GroundColor
-      second: {r: 0.369, g: 0.349, b: 0.341, a: 1}
-    - first:
-        name: _SkyTint
-      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - first:
         name: _Tint
-      second: {r: 0.5294118, g: 0.8831642, b: 1, a: 0.5}
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
