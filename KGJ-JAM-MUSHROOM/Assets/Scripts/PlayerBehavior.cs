@@ -144,7 +144,7 @@ public class PlayerBehavior : MonoBehaviour {
             }
             else if (!isSearching && isTouchingBush)
             {
-                GameObject indi = Instantiate(searchIndicator, transform.position + new Vector3(0, 1, 0), new Quaternion(0, 0, 0, 0));
+                GameObject indi = Instantiate(searchIndicator, transform.position + new Vector3(0, 2, 0), new Quaternion(0, 0, 0, 0));
                 indi.transform.SetParent(transform);
                 isSearching = true;
             }
@@ -217,7 +217,7 @@ public class PlayerBehavior : MonoBehaviour {
 
     public void getHit(Vector3 hitPos)
     {
-        GetComponent<Rigidbody>().AddForceAtPosition(new Vector3(250f, 0f, 250f), hitPos);
+        GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(3f, -3f), 0f, Random.Range(3f, -3f)), ForceMode.Impulse);
         GetComponent<AudioSource>().Play();
         StartCoroutine("hitStun");
     }
@@ -268,13 +268,15 @@ public class PlayerBehavior : MonoBehaviour {
         isStunned = true;
         isInvinsible = true;
         GetComponent<Renderer>().material.color = new Color(color.r, color.g, color.b, 0.5f);
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         isStunned = false;
         isInvinsible = true;
         yield return new WaitForSeconds(1.0f);
         isStunned = false;
         isInvinsible = false;
         GetComponent<Renderer>().material.color = new Color(color.r, color.g, color.b, 1f);
+        GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         yield return null;
     }
 
