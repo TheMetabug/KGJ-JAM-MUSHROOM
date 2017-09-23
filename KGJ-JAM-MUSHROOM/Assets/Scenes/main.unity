@@ -297,6 +297,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchPrefab: {fileID: 1917112222200494, guid: 9c2d9ee17a2e01e42a733559951e2a8f,
     type: 2}
+  searchIndicator: {fileID: 1739701129625024, guid: 3cb8e8ec9b7b27a438e4ca3345420197,
+    type: 2}
   moveSpeed: 5
   acceleration: 1
   friction: 0.5
@@ -306,6 +308,8 @@ MonoBehaviour:
   isStunned: 0
   isInvinsible: 0
   hasPunched: 0
+  isSearching: 0
+  isTouchingBush: 0
 --- !u!1 &360499088
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +842,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchPrefab: {fileID: 1917112222200494, guid: 9c2d9ee17a2e01e42a733559951e2a8f,
     type: 2}
+  searchIndicator: {fileID: 1739701129625024, guid: 3cb8e8ec9b7b27a438e4ca3345420197,
+    type: 2}
   moveSpeed: 5
   acceleration: 1
   friction: 0.5
@@ -847,6 +853,8 @@ MonoBehaviour:
   isStunned: 0
   isInvinsible: 0
   hasPunched: 0
+  isSearching: 0
+  isTouchingBush: 0
 --- !u!54 &1257604002
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1112,10 +1120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a33114d41c1da94ea051fa081943273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mushroom_Deposit: {fileID: 4199584457667238, guid: 1949ff520f49348418040a4c38e9140b,
+  Mushroom_deposit: {fileID: 4199584457667238, guid: 1949ff520f49348418040a4c38e9140b,
     type: 2}
   Chantarelle: {fileID: 4229481878804490, guid: e2078c72cb4ff504e87dbe19b5a11e96,
     type: 2}
+  Amanita: {fileID: 4153536273900120, guid: 38fdcad4be2a50d4da2f8500393f195c, type: 2}
+  Speed: {fileID: 4523058244791248, guid: 7cd80a455261c75449c2277c9b00a3d2, type: 2}
 --- !u!1 &1494166669
 GameObject:
   m_ObjectHideFlags: 0
