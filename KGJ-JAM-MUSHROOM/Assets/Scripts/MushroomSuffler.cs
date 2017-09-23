@@ -15,23 +15,29 @@ public class MushroomSuffler : MonoBehaviour {
     {
         for (int i = 0; i < 10; i++)
         {
-            Instantiate(Mushroom_deposit, new Vector3(Random.Range(-12, 12), 2, Random.Range(-5, 20)), new Quaternion(0, 0, 0, 0), transform);
-            Debug.Log(rocks);
-            Mushroom_deposit.GetComponent<MeshFilter>().mesh = rocks[Random.Range(0, 3)];
+            Transform inst = Instantiate(
+                Mushroom_deposit,
+                new Vector3(Random.Range(-12, 12), 2, Random.Range(-5, 20)),
+                new Quaternion(0, 0, 0, 0),
+                transform
+            );
+            inst.GetComponent<MeshFilter>().mesh = rocks[Random.Range(0, 3)];
+            inst.Rotate(-90, 0, 0);
+            inst.transform.localScale = new Vector3(0.45f, 0.45f, 1.25f);
             int random = Random.Range(0, 3);
             if(random == 0)
             {
-                Mushroom_deposit.GetComponent<Mushroom_Deposit>().prefab = Amanita;
+                inst.GetComponent<Mushroom_Deposit>().prefab = Amanita;
       
             }
             else if (random == 1)
             {
-                Mushroom_deposit.GetComponent<Mushroom_Deposit>().prefab = Speed;
+                inst.GetComponent<Mushroom_Deposit>().prefab = Speed;
        
             }
             else if(random >= 2)
             {
-                Mushroom_deposit.GetComponent<Mushroom_Deposit>().prefab = Poison;
+                inst.GetComponent<Mushroom_Deposit>().prefab = Poison;
             }
             
 
@@ -39,12 +45,12 @@ public class MushroomSuffler : MonoBehaviour {
         }
         Mushroom_Deposit script = transform.GetComponentInChildren<Mushroom_Deposit>();
         script.prefab = Chantarelle;
-        script.transform.Rotate(20, 20, 20);
+        // script.transform.Rotate(20, 20, 20);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
-	}
+
+    }
 }
