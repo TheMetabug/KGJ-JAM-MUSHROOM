@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Mushroom_Deposit : MonoBehaviour {
-    public float searchTimer = 240.1f;
+    public float searchTimer = 4f;
 
     public Transform prefab;
 	// Use this for initialization
@@ -37,7 +37,7 @@ public class Mushroom_Deposit : MonoBehaviour {
             searchTimer = 0;
         }
         if (searchTimer > 0)
-        searchTimer -= 1.0f * other.GetComponent<PlayerBehavior>().gatheringSpeedModifier;
+            searchTimer -= Time.deltaTime * other.GetComponent<PlayerBehavior>().gatheringSpeedModifier;
         
     }
 

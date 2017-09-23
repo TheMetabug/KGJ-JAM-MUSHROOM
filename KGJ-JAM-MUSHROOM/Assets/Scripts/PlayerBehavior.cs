@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerBehavior : MonoBehaviour {
 
     public GameObject punchPrefab;
+    public GameObject searchIndicator;
     public float moveSpeed = 7;
     public float acceleration = 1f;
     public float friction = 0.5f;
@@ -14,6 +15,8 @@ public class PlayerBehavior : MonoBehaviour {
     public bool isStunned = false;
     public bool isInvinsible = false;
     public bool hasPunched = false;
+    public bool isSearching = false;
+    public bool isTouchingBush = false;
 
     private Vector3 dirVel = new Vector3();
     private float m_speed = 0f;
@@ -127,29 +130,55 @@ public class PlayerBehavior : MonoBehaviour {
         }
 
         // Action key check
-        if (isPressedAction = Input.GetKey(keyInputs[4]))
+        isPressedAction = Input.GetKey(keyInputs[4]);
+        if (isPressedAction)
         {
-            isPressedAction = Input.GetKey(keyInputs[4]);
-            if (!hasPunched)
+            if (!hasPunched && !isSearching && !isTouchingBush)
             {
                 GameObject punch = Instantiate(punchPrefab, transform.position, transform.rotation);
                 punch.GetComponent<PunchBehaviour>().owner = gameObject;
                 StartCoroutine("punchCooldown");
             }
+            // bush touching / searching
+            if (!isTouchingBush)
+            {
+                isSearching = false;
+            }
+            else if (!isSearching && isTouchingBush)
+            {
+                GameObject indi = Instantiate(searchIndicator, transform.position + new Vector3(0, 1, 0), new Quaternion(0, 0, 0, 0));
+                indi.transform.SetParent(transform);
+                isSearching = true;
+            }
+        }
+        else
+        {
+            isSearching = false;
+        }
+
+        if (!isSearching)
+        {
+            if(transform.GetComponentInChildren<SearchIndicatorBehaviour>())
+            {
+                Destroy(transform.GetComponentInChildren<SearchIndicatorBehaviour>().gameObject);
+            }
         }
 
         // Apply movement
-        Vector3 pos = GetComponent<Rigidbody>().position;
-        Vector3 toPos = new Vector3(
-            pos.x + (m_speed * dirVel.x * m_moveSpeedModifier),
-            pos.y,
-            pos.z + (m_speed * dirVel.z * m_moveSpeedModifier)
-        );
-        Vector3 lerpPos = Vector3.Lerp(pos, toPos, (Time.deltaTime * lerpMultiplier));
-        GetComponent<Rigidbody>().MovePosition(lerpPos);
+        if (!isSearching)
+        {
+            Vector3 pos = GetComponent<Rigidbody>().position;
+            Vector3 toPos = new Vector3(
+                pos.x + (m_speed * dirVel.x * m_moveSpeedModifier),
+                pos.y,
+                pos.z + (m_speed * dirVel.z * m_moveSpeedModifier)
+            );
+            Vector3 lerpPos = Vector3.Lerp(pos, toPos, (Time.deltaTime * lerpMultiplier));
+            GetComponent<Rigidbody>().MovePosition(lerpPos);
 
-        // look direction
-        transform.rotation = Quaternion.LookRotation(lookdirection);
+            // look direction
+            transform.rotation = Quaternion.LookRotation(lookdirection);
+        }
     }
 
     private void MovementHandler()
@@ -251,5 +280,21 @@ public class PlayerBehavior : MonoBehaviour {
         hasPunched = true;
         yield return new WaitForSeconds(0.5f);
         hasPunched = false;
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "ShroomBush")
+        {
+            isTouchingBush = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "ShroomBush")
+        {
+            isTouchingBush = false;
+        }
     }
 }

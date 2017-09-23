@@ -10,6 +10,7 @@ TagManager:
   - Amanita
   - Speed
   - Poison
+  - ShroomBush
   layers:
   - Default
   - TransparentFX

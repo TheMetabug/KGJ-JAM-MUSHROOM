@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: a670137739288694b9e176fcefb1e5cf
+timeCreated: 1506173832
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: AutoSide_Plane
+    100002: Box001
+    100004: Box002
+    100006: Box003
+    100008: Kapy
+    100010: Object001
+    100012: Object002
+    100014: Object003
+    100016: //RootNode
+    100018: Rock_2
+    100020: Rock_2_Big
+    100022: Rock_3
+    100024: Rock_3_Big
+    100026: Rock_4
+    100028: Rock_4_Big
+    100030: Rock_5
+    100032: Rock_5_Big
+    100034: Rock_BaseForThingies
+    100036: Sieni_Kanttarelli
+    100038: Sieni_Karpassieni
+    100040: Sieni_Rousku
+    100042: Sieni_Tatti_Iso
+    100044: Sieni_Tatti_Pieni
+    100046: Tree_LeafTree
+    100048: Tree_Oak
+    100050: Tree_Spruce
+    100052: Tree_Spruce2
+    100054: Tree_Spruce3
+    100056: Tree_StylizedTree
+    400000: AutoSide_Plane
+    400002: Box001
+    400004: Box002
+    400006: Box003
+    400008: Kapy
+    400010: Object001
+    400012: Object002
+    400014: Object003
+    400016: //RootNode
+    400018: Rock_2
+    400020: Rock_2_Big
+    400022: Rock_3
+    400024: Rock_3_Big
+    400026: Rock_4
+    400028: Rock_4_Big
+    400030: Rock_5
+    400032: Rock_5_Big
+    400034: Rock_BaseForThingies
+    400036: Sieni_Kanttarelli
+    400038: Sieni_Karpassieni
+    400040: Sieni_Rousku
+    400042: Sieni_Tatti_Iso
+    400044: Sieni_Tatti_Pieni
+    400046: Tree_LeafTree
+    400048: Tree_Oak
+    400050: Tree_Spruce
+    400052: Tree_Spruce2
+    400054: Tree_Spruce3
+    400056: Tree_StylizedTree
+    2300000: AutoSide_Plane
+    2300002: Box001
+    2300004: Box002
+    2300006: Box003
+    2300008: Kapy
+    2300010: Object001
+    2300012: Object002
+    2300014: Object003
+    2300016: Rock_2
+    2300018: Rock_2_Big
+    2300020: Rock_3
+    2300022: Rock_3_Big
+    2300024: Rock_4
+    2300026: Rock_4_Big
+    2300028: Rock_5
+    2300030: Rock_5_Big
+    2300032: Rock_BaseForThingies
+    2300034: Sieni_Kanttarelli
+    2300036: Sieni_Karpassieni
+    2300038: Sieni_Rousku
+    2300040: Sieni_Tatti_Iso
+    2300042: Sieni_Tatti_Pieni
+    2300044: Tree_LeafTree
+    2300046: Tree_Oak
+    2300048: Tree_Spruce
+    2300050: Tree_Spruce2
+    2300052: Tree_Spruce3
+    2300054: Tree_StylizedTree
+    3300000: AutoSide_Plane
+    3300002: Box001
+    3300004: Box002
+    3300006: Box003
+    3300008: Kapy
+    3300010: Object001
+    3300012: Object002
+    3300014: Object003
+    3300016: Rock_2
+    3300018: Rock_2_Big
+    3300020: Rock_3
+    3300022: Rock_3_Big
+    3300024: Rock_4
+    3300026: Rock_4_Big
+    3300028: Rock_5
+    3300030: Rock_5_Big
+    3300032: Rock_BaseForThingies
+    3300034: Sieni_Kanttarelli
+    3300036: Sieni_Karpassieni
+    3300038: Sieni_Rousku
+    3300040: Sieni_Tatti_Iso
+    3300042: Sieni_Tatti_Pieni
+    3300044: Tree_LeafTree
+    3300046: Tree_Oak
+    3300048: Tree_Spruce
+    3300050: Tree_Spruce2
+    3300052: Tree_Spruce3
+    3300054: Tree_StylizedTree
+    4300000: AutoSide_Plane
+    4300002: Sieni_Tatti_Pieni
+    4300004: Sieni_Tatti_Iso
+    4300006: Sieni_Karpassieni
+    4300008: Sieni_Rousku
+    4300010: Sieni_Kanttarelli
+    4300012: Rock_BaseForThingies
+    4300014: Rock_2
+    4300016: Rock_4
+    4300018: Rock_3
+    4300020: Rock_5
+    4300022: Rock_4_Big
+    4300024: Rock_2_Big
+    4300026: Rock_3_Big
+    4300028: Rock_5_Big
+    4300030: Tree_StylizedTree
+    4300032: Tree_Spruce
+    4300034: Box001
+    4300036: Tree_Spruce2
+    4300038: Tree_Oak
+    4300040: Tree_LeafTree
+    4300042: Box002
+    4300044: Object001
+    4300046: Object002
+    4300048: Tree_Spruce3
+    4300050: Box003
+    4300052: Object003
+    4300054: Kapy
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
