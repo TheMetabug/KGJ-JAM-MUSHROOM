@@ -15,7 +15,7 @@ public class CameraBehaviour : MonoBehaviour {
     void Start ()
     {
         lerpPoint = transorm_a.position + (transorm_b.position - transorm_a.position) / 2;
-        cameraStartPoint = transform.localPosition;
+        cameraStartPoint = transform.localPosition - new Vector3(0, 0, offset);
     }
 	
 	// Update is called once per frame

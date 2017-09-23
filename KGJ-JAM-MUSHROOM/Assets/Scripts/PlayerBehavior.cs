@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour {
 
+    public GameObject punchPrefab;
     public float moveSpeed = 7;
     public float acceleration = 1f;
     public float friction = 0.5f;
     public float lerpMultiplier = 0.75f;
     public System.Collections.Generic.List<KeyCode> keyInputs = new System.Collections.Generic.List<KeyCode>();
     public bool isPressedAction = false;
+    public bool isStunned = false;
+    public bool isInvinsible = false;
+    public bool hasPunched = false;
 
     private Vector3 dirVel = new Vector3();
     private float m_speed = 0f;
@@ -25,7 +29,10 @@ public class PlayerBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        MovementControls();
+        if (!isStunned)
+        {
+            MovementControls();
+        }
         MovementHandler();
         m_moving = false;
     }
@@ -107,7 +114,16 @@ public class PlayerBehavior : MonoBehaviour {
         }
 
         // Action key check
-        isPressedAction = Input.GetKey(keyInputs[4]);
+        if (isPressedAction = Input.GetKey(keyInputs[4]))
+        {
+            isPressedAction = Input.GetKey(keyInputs[4]);
+            if (!hasPunched)
+            {
+                GameObject punch = Instantiate(punchPrefab, transform.position, transform.rotation);
+                punch.GetComponent<PunchBehaviour>().owner = gameObject;
+                StartCoroutine("punchCooldown");
+            }
+        }
 
         // Apply movement
         Vector3 pos = GetComponent<Rigidbody>().position;
@@ -157,5 +173,30 @@ public class PlayerBehavior : MonoBehaviour {
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, -10);
         }
+    }
+
+    public void getHit(Vector3 hitPos)
+    {
+        StartCoroutine("hitStun");
+    }
+
+    IEnumerator hitStun()
+    {
+        isStunned = true;
+        isInvinsible = true;
+        yield return new WaitForSeconds(1.0f);
+        isStunned = false;
+        isInvinsible = true;
+        yield return new WaitForSeconds(1.0f);
+        isStunned = false;
+        isInvinsible = false;
+        yield return null;
+    }
+
+    IEnumerator punchCooldown()
+    {
+        hasPunched = true;
+        yield return new WaitForSeconds(0.5f);
+        hasPunched = false;
     }
 }
