@@ -9,6 +9,7 @@ public class MushroomSuffler : MonoBehaviour {
     public Transform Chantarelle;
     public Transform Amanita;
     public Transform Speed;
+    public Transform Poison;
     void Start ()
     {
         for (int i = 0; i < 10; i++)
@@ -24,6 +25,10 @@ public class MushroomSuffler : MonoBehaviour {
             {
                 Mushroom_deposit.GetComponent<Mushroom_Deposit>().prefab = Speed;
        
+            }
+            else if(random == 2)
+            {
+                Mushroom_deposit.GetComponent<Mushroom_Deposit>().prefab = Poison;
             }
             
 

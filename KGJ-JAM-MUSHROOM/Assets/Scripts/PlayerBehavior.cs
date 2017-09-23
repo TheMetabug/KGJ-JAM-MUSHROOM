@@ -186,12 +186,14 @@ public class PlayerBehavior : MonoBehaviour {
         if(mushroom.tag == "Amanita")
         {
             StartCoroutine("Amanita");
-            Destroy(mushroom);
         }
         else if(mushroom.tag == "Speed")
         {
             StartCoroutine("SpeedShroom");
-            Destroy(mushroom);
+        }
+        else if(mushroom.tag == "Poison")
+        {
+            StartCoroutine("PoisonShroom");
         }
     }
     IEnumerator Amanita()
@@ -204,6 +206,13 @@ public class PlayerBehavior : MonoBehaviour {
     IEnumerator SpeedShroom()
     {
         m_moveSpeedModifier = 1.5f;
+        yield return new WaitForSeconds(3);
+        m_moveSpeedModifier = 1;
+        yield return null;
+    }
+    IEnumerator PoisonShroom()
+    {
+        m_moveSpeedModifier = -1;
         yield return new WaitForSeconds(3);
         m_moveSpeedModifier = 1;
         yield return null;
