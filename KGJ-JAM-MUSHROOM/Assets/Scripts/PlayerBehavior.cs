@@ -177,19 +177,24 @@ public class PlayerBehavior : MonoBehaviour {
 
     public void getHit(Vector3 hitPos)
     {
+        GetComponent<Rigidbody>().AddForceAtPosition(new Vector3(250f, 0f, 250f), hitPos);
         StartCoroutine("hitStun");
     }
 
     IEnumerator hitStun()
     {
+        Color color = GetComponent<Renderer>().material.color;
+
         isStunned = true;
         isInvinsible = true;
+        GetComponent<Renderer>().material.color = new Color(color.r, color.g, color.b, 0.5f);
         yield return new WaitForSeconds(1.0f);
         isStunned = false;
         isInvinsible = true;
         yield return new WaitForSeconds(1.0f);
         isStunned = false;
         isInvinsible = false;
+        GetComponent<Renderer>().material.color = new Color(color.r, color.g, color.b, 1f);
         yield return null;
     }
 

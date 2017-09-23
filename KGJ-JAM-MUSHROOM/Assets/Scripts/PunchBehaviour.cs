@@ -13,8 +13,7 @@ public class PunchBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float pos = transform.position.z + (Time.deltaTime * 10);
-        transform.position = new Vector3(transform.position.x, transform.position.y, pos);
+        transform.Translate(0f, 0f, 0.65f);
         lifeTime -= Time.deltaTime;
         if (lifeTime < 0)
         {
@@ -24,11 +23,12 @@ public class PunchBehaviour : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log(col.tag);
-        Debug.Log(owner.tag);
-        if (col.tag != owner.tag && !col.GetComponent<PlayerBehavior>().isInvinsible)
+        if (col.GetComponent<PlayerBehavior>() != null)
         {
-            col.GetComponent<PlayerBehavior>().getHit(transform.position);
+            if (col.tag != owner.tag && !col.GetComponent<PlayerBehavior>().isInvinsible)
+            {
+                col.GetComponent<PlayerBehavior>().getHit(transform.localPosition);
+            }
         }
     }
 }

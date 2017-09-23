@@ -295,12 +295,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3677d89b9dc57a4fb1676bdbbe6f9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punchPrefab: {fileID: 1917112222200494, guid: 9c2d9ee17a2e01e42a733559951e2a8f,
+    type: 2}
   moveSpeed: 5
   acceleration: 1
   friction: 0.5
   lerpMultiplier: 2
   keyInputs: 7700000061000000730000006400000032010000
   isPressedAction: 0
+  isStunned: 0
+  isInvinsible: 0
+  hasPunched: 0
 --- !u!1 &360499088
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +551,7 @@ GameObject:
   - component: {fileID: 965654361}
   - component: {fileID: 965654360}
   - component: {fileID: 965654359}
+  - component: {fileID: 965654364}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -621,6 +627,19 @@ Transform:
   m_Father: {fileID: 230442011}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &965654364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965654358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b2163fc9d59a347a8e75734d48865c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transorm_a: {fileID: 267926216}
+  transorm_b: {fileID: 1257604000}
 --- !u!1 &1119466906
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,12 +836,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3677d89b9dc57a4fb1676bdbbe6f9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punchPrefab: {fileID: 1917112222200494, guid: 9c2d9ee17a2e01e42a733559951e2a8f,
+    type: 2}
   moveSpeed: 5
   acceleration: 1
   friction: 0.5
   lerpMultiplier: 2
   keyInputs: 1101000014010000120100001301000031010000
   isPressedAction: 0
+  isStunned: 0
+  isInvinsible: 0
+  hasPunched: 0
 --- !u!54 &1257604002
 Rigidbody:
   m_ObjectHideFlags: 0
