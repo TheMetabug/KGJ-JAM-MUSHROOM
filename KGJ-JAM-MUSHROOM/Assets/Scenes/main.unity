@@ -297,6 +297,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchPrefab: {fileID: 1917112222200494, guid: 9c2d9ee17a2e01e42a733559951e2a8f,
     type: 2}
+  searchIndicator: {fileID: 1739701129625024, guid: 3cb8e8ec9b7b27a438e4ca3345420197,
+    type: 2}
   moveSpeed: 5
   acceleration: 1
   friction: 0.5
@@ -306,6 +308,8 @@ MonoBehaviour:
   isStunned: 0
   isInvinsible: 0
   hasPunched: 0
+  isSearching: 0
+  isTouchingBush: 0
   gatheringSpeedModifier: 0
   m_defaultMoveSpeedModifier: 0
 --- !u!1 &360499088
@@ -840,6 +844,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchPrefab: {fileID: 1917112222200494, guid: 9c2d9ee17a2e01e42a733559951e2a8f,
     type: 2}
+  searchIndicator: {fileID: 1739701129625024, guid: 3cb8e8ec9b7b27a438e4ca3345420197,
+    type: 2}
   moveSpeed: 5
   acceleration: 1
   friction: 0.5
@@ -849,6 +855,8 @@ MonoBehaviour:
   isStunned: 0
   isInvinsible: 0
   hasPunched: 0
+  isSearching: 0
+  isTouchingBush: 0
   gatheringSpeedModifier: 0
   m_defaultMoveSpeedModifier: 0
 --- !u!54 &1257604002

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114361933869648194}
   m_Layer: 0
   m_Name: Mushroom deposit
-  m_TagString: Untagged
+  m_TagString: ShroomBush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,5 +104,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 129a6675d10576749b11efec6d771cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  searchTimer: 240.1
+  searchTimer: 4
   prefab: {fileID: 4791719753623708, guid: d2f86cf6774be4247a9ed803243a7899, type: 2}
