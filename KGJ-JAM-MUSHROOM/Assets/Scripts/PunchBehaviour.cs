@@ -31,6 +31,9 @@ public class PunchBehaviour : MonoBehaviour {
             if (col.tag != owner.tag && !col.GetComponent<PlayerBehavior>().isInvinsible)
             {
                 col.GetComponent<PlayerBehavior>().getHit(transform.localPosition);
+                GameObject chantarelle = GameObject.FindGameObjectsWithTag("Chantarelle")[0];
+                chantarelle.transform.position = owner.transform.position + new Vector3(0, 2f, 0);
+                chantarelle.transform.SetParent(owner.transform);
             }
         }
     }

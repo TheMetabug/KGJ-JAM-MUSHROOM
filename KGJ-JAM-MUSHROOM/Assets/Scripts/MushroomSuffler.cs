@@ -10,11 +10,14 @@ public class MushroomSuffler : MonoBehaviour {
     public Transform Amanita;
     public Transform Speed;
     public Transform Poison;
+    public Mesh[] rocks;
     void Start ()
     {
         for (int i = 0; i < 10; i++)
         {
             Instantiate(Mushroom_deposit, new Vector3(Random.Range(-12, 12), 2, Random.Range(-5, 20)), new Quaternion(0, 0, 0, 0), transform);
+            Debug.Log(rocks);
+            Mushroom_deposit.GetComponent<MeshFilter>().mesh = rocks[Random.Range(0, 3)];
             int random = Random.Range(0, 3);
             if(random == 0)
             {
