@@ -91,6 +91,7 @@ ModelImporter:
     2300050: Tree_Spruce2
     2300052: Tree_Spruce3
     2300054: Tree_StylizedTree
+    2300056: //RootNode
     3300000: AutoSide_Plane
     3300002: Box001
     3300004: Box002
@@ -119,6 +120,7 @@ ModelImporter:
     3300050: Tree_Spruce2
     3300052: Tree_Spruce3
     3300054: Tree_StylizedTree
+    3300056: //RootNode
     4300000: AutoSide_Plane
     4300002: Sieni_Tatti_Pieni
     4300004: Sieni_Tatti_Iso

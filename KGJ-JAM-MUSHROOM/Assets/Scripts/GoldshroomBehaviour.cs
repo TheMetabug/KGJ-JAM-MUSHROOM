@@ -13,6 +13,7 @@ public class GoldshroomBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        transform.Rotate(new Vector3(1, 1f, 0), 20f);
+        transform.Rotate(new Vector3(0, 1f, 0), 5f);
+        transform.GetChild(0).transform.rotation = new Quaternion(0, 0, 0, 1);
 	}
 }

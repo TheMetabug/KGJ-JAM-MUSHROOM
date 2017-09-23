@@ -19,12 +19,15 @@ public class Mushroom_Deposit : MonoBehaviour {
 	}
     void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<PlayerBehavior>().isPressedAction)
+        if (other.GetComponent<PlayerBehavior>())
         {
-            SearchingForMushrooms(other.gameObject);
+            if (other.GetComponent<PlayerBehavior>().isPressedAction)
+            {
+                SearchingForMushrooms(other.gameObject);
+            }
         }
-
     }
+
     void SearchingForMushrooms(GameObject other)
     {
         while(searchTimer < 0)

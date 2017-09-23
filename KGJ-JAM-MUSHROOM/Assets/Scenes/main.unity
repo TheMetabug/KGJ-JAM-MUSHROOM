@@ -595,7 +595,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.27979022, g: 0.36828682, b: 0.50735295, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -933,7 +933,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1285574951}
-  - component: {fileID: 1285574952}
   m_Layer: 0
   m_Name: PlayArea
   m_TagString: Untagged
@@ -955,24 +954,6 @@ Transform:
   m_Father: {fileID: 230442011}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1285574952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1285574950}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a33114d41c1da94ea051fa081943273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mushroom_deposit: {fileID: 4199584457667238, guid: 1949ff520f49348418040a4c38e9140b,
-    type: 2}
-  Chantarelle: {fileID: 4229481878804490, guid: e2078c72cb4ff504e87dbe19b5a11e96,
-    type: 2}
-  Amanita: {fileID: 4153536273900120, guid: 38fdcad4be2a50d4da2f8500393f195c, type: 2}
-  Speed: {fileID: 4523058244791248, guid: 7cd80a455261c75449c2277c9b00a3d2, type: 2}
-  Poison: {fileID: 4791719753623708, guid: d2f86cf6774be4247a9ed803243a7899, type: 2}
 --- !u!1 &1335717709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +1492,11 @@ MonoBehaviour:
   Amanita: {fileID: 4153536273900120, guid: 38fdcad4be2a50d4da2f8500393f195c, type: 2}
   Speed: {fileID: 4523058244791248, guid: 7cd80a455261c75449c2277c9b00a3d2, type: 2}
   Poison: {fileID: 4791719753623708, guid: d2f86cf6774be4247a9ed803243a7899, type: 2}
+  rocks:
+  - {fileID: 4300000, guid: dad8bd4e7c166a9469749c213d171e55, type: 3}
+  - {fileID: 4300000, guid: 4cc162d836de6ab4abca6a556f0bf3fc, type: 3}
+  - {fileID: 4300016, guid: a670137739288694b9e176fcefb1e5cf, type: 3}
+  - {fileID: 4300020, guid: a670137739288694b9e176fcefb1e5cf, type: 3}
 --- !u!23 &1898331584
 MeshRenderer:
   m_ObjectHideFlags: 0
