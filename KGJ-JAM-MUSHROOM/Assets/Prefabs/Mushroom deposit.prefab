@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1248031568622552}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -104,4 +104,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 129a6675d10576749b11efec6d771cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  searchTimer: 240.1
   prefab: {fileID: 0}
