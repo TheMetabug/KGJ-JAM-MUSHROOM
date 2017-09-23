@@ -5,13 +5,29 @@ using UnityEngine;
 public class MushroomSuffler : MonoBehaviour {
 
     // Use this for initialization
-    public Transform Mushroom_Deposit;
+    public Transform Mushroom_deposit;
     public Transform Chantarelle;
+    public Transform Amanita;
+    public Transform Speed;
     void Start ()
     {
         for (int i = 0; i < 10; i++)
         {
-            Instantiate(Mushroom_Deposit, new Vector3(Random.Range(-12, 12), 2, Random.Range(-5, 20)), new Quaternion(0, 0, 0, 0), transform);
+            Instantiate(Mushroom_deposit, new Vector3(Random.Range(-12, 12), 2, Random.Range(-5, 20)), new Quaternion(0, 0, 0, 0), transform);
+            int random = Random.Range(0, 2);
+            if(random == 0)
+            {
+                Mushroom_deposit.GetComponent<Mushroom_Deposit>().prefab = Amanita;
+      
+            }
+            else if (random == 1)
+            {
+                Mushroom_deposit.GetComponent<Mushroom_Deposit>().prefab = Speed;
+       
+            }
+            
+
+
         }
         Mushroom_Deposit script = transform.GetComponentInChildren<Mushroom_Deposit>();
         script.prefab = Chantarelle;

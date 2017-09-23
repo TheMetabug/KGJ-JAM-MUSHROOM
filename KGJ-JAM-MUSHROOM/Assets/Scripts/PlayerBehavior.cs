@@ -17,6 +17,7 @@ public class PlayerBehavior : MonoBehaviour {
 
     private Vector3 dirVel = new Vector3();
     private float m_speed = 0f;
+    private float m_moveSpeedModifier = 1;
     private bool m_moving = false;
     private Vector3 lookdirection = new Vector3(1, 0, 1);
 
@@ -128,9 +129,9 @@ public class PlayerBehavior : MonoBehaviour {
         // Apply movement
         Vector3 pos = GetComponent<Rigidbody>().position;
         Vector3 toPos = new Vector3(
-            pos.x + (m_speed * dirVel.x),
+            pos.x + (m_speed * dirVel.x * m_moveSpeedModifier),
             pos.y,
-            pos.z + (m_speed * dirVel.z)
+            pos.z + (m_speed * dirVel.z * m_moveSpeedModifier)
         );
         Vector3 lerpPos = Vector3.Lerp(pos, toPos, (Time.deltaTime * lerpMultiplier));
         GetComponent<Rigidbody>().MovePosition(lerpPos);
@@ -180,7 +181,33 @@ public class PlayerBehavior : MonoBehaviour {
         GetComponent<Rigidbody>().AddForceAtPosition(new Vector3(250f, 0f, 250f), hitPos);
         StartCoroutine("hitStun");
     }
-
+    public void getShroom(Transform mushroom)
+    {
+        if(mushroom.tag == "Amanita")
+        {
+            StartCoroutine("Amanita");
+            Destroy(mushroom);
+        }
+        else if(mushroom.tag == "Speed")
+        {
+            StartCoroutine("SpeedShroom");
+            Destroy(mushroom);
+        }
+    }
+    IEnumerator Amanita()
+    {
+        m_moveSpeedModifier = 0.5f;
+        yield return new WaitForSeconds(3);
+        m_moveSpeedModifier = 1;
+        yield return null;
+    }
+    IEnumerator SpeedShroom()
+    {
+        m_moveSpeedModifier = 1.5f;
+        yield return new WaitForSeconds(3);
+        m_moveSpeedModifier = 1;
+        yield return null;
+    }
     IEnumerator hitStun()
     {
         Color color = GetComponent<Renderer>().material.color;
