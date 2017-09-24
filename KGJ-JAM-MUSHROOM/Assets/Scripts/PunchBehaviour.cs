@@ -20,7 +20,7 @@ public class PunchBehaviour : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        float scale = transform.localScale.x + 0.35f;
+        float scale = transform.localScale.x + 0.05f;
         transform.localScale = new Vector3(scale, transform.localScale.y, transform.localScale.z);
     }
 
@@ -32,10 +32,15 @@ public class PunchBehaviour : MonoBehaviour {
             {
                 col.GetComponent<PlayerBehavior>().getHit(transform.localPosition);
                 col.GetComponent<PlayerBehavior>().m_moveSpeedModifier = col.GetComponent<PlayerBehavior>().m_defaultMoveSpeedModifier;
-                GameObject chantarelle = GameObject.FindGameObjectsWithTag("Chantarelle")[0];
-                chantarelle.transform.position = owner.transform.position + new Vector3(0, 2f, 0);
-                chantarelle.transform.SetParent(owner.transform);
-                owner.GetComponent<PlayerBehavior>().m_moveSpeedModifier = owner.GetComponent<PlayerBehavior>().m_defaultMoveSpeedModifier * 0.8f;
+                if (GameObject.FindGameObjectsWithTag("Chantarelle").Length > 0)
+                {
+                    col.GetComponent<PlayerBehavior>().m_canSearch = true;
+                    GameObject chantarelle = GameObject.FindGameObjectsWithTag("Chantarelle")[0];
+                    chantarelle.transform.position = owner.transform.position + new Vector3(0, 2f, 0);
+                    chantarelle.transform.SetParent(owner.transform);
+                    owner.GetComponent<PlayerBehavior>().m_moveSpeedModifier = owner.GetComponent<PlayerBehavior>().m_defaultMoveSpeedModifier * 0.8f;
+                    owner.GetComponent<PlayerBehavior>().m_canSearch = false;
+                }
             }
         }
     }
