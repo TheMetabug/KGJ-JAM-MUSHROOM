@@ -179,7 +179,7 @@ public class PlayerBehavior : MonoBehaviour {
             }
             else if (!isSearching && isTouchingBush && m_canSearch)
             {
-                GameObject indi = Instantiate(searchIndicator, transform.position + new Vector3(0, 2, 0), new Quaternion(0, 0, 0, 0));
+                GameObject indi = Instantiate(searchIndicator, transform.position + new Vector3(0, 4, 0), new Quaternion(0, 0, 0, 0));
                 indi.transform.SetParent(transform);
                 isSearching = true;
             }
