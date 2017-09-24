@@ -17,7 +17,7 @@ public class MushroomSuffler : MonoBehaviour {
         {
             Transform inst = Instantiate(
                 Mushroom_deposit,
-                new Vector3(Random.Range(-12, 12), 1.5f, Random.Range(-5, 20)),
+                new Vector3(Random.Range(-12, 12), 0f, Random.Range(-5, 20)),
                 new Quaternion(0, 0, 0, 0),
                 transform
             );
