@@ -21,32 +21,32 @@ Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MU
 Loading C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.038 seconds
+- Completed reload, in  0.041 seconds
 Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.996019 ms
+UnloadTime: 0.979947 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1500 -> priority: 1 
-  Thread -> id: 245c -> priority: 1 
+  Thread -> id: 24a0 -> priority: 1 
+  Thread -> id: 2a98 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.015771 ms
+UnloadTime: 2.945550 ms
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1048.
-Total: 0.721892 ms (FindLiveObjects: 0.062185 ms CreateObjectMapping: 0.021629 ms MarkObjects: 0.243034 ms  DeleteObjects: 0.390236 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.833796 ms
-
-Unloading 167 unused Assets to reduce memory usage. Loaded Objects now: 353.
-Total: 3.774089 ms (FindLiveObjects: 0.053173 ms CreateObjectMapping: 0.048967 ms MarkObjects: 0.397746 ms  DeleteObjects: 3.272399 ms)
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1052.
+Total: 0.757341 ms (FindLiveObjects: 0.044761 ms CreateObjectMapping: 0.020428 ms MarkObjects: 0.273676 ms  DeleteObjects: 0.414269 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.838152 ms
+UnloadTime: 2.783026 ms
+
+Unloading 172 unused Assets to reduce memory usage. Loaded Objects now: 353.
+Total: 4.874502 ms (FindLiveObjects: 0.053173 ms CreateObjectMapping: 0.050769 ms MarkObjects: 0.398948 ms  DeleteObjects: 4.370409 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.869996 ms
 
 Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 353.
-Total: 0.483064 ms (FindLiveObjects: 0.044761 ms CreateObjectMapping: 0.040856 ms MarkObjects: 0.387532 ms  DeleteObjects: 0.009012 ms)
+Total: 0.468644 ms (FindLiveObjects: 0.042057 ms CreateObjectMapping: 0.039954 ms MarkObjects: 0.377619 ms  DeleteObjects: 0.008411 ms)
 
