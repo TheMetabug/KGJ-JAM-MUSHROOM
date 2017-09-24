@@ -53,16 +53,19 @@ public class PlayerBehavior : MonoBehaviour {
         if (hasWon)
         {
             anim.Play("Samba Dancing");
+            anim.speed = 1;
         }
         else if (hasLost)
         {
             anim.Play("Flying Back Death");
+            anim.speed = 1;
         }
         else
         {
             if (!isStunned)
             {
                 MovementControls();
+                anim.speed = Mathf.Abs(m_moveSpeedModifier) * 2;
             }
             MovementHandler();
             m_moving = false;
@@ -209,6 +212,7 @@ public class PlayerBehavior : MonoBehaviour {
             // look direction
             transform.rotation = Quaternion.LookRotation(lookdirection);
         }
+
     }
 
     private void MovementHandler()
