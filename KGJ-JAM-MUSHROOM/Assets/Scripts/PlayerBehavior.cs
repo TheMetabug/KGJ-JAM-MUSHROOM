@@ -27,6 +27,7 @@ public class PlayerBehavior : MonoBehaviour {
     public bool m_canSearch = true;
     public Animator anim;
     public bool hasWon = false;
+    public bool hasLost = false;
     // Use this for initialization
     void Start ()
     {
@@ -52,6 +53,10 @@ public class PlayerBehavior : MonoBehaviour {
         if (hasWon)
         {
             anim.Play("Samba Dancing");
+        }
+        else if (hasLost)
+        {
+            anim.Play("Flying Back Death");
         }
         else
         {

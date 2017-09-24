@@ -8,6 +8,9 @@ public class Parking_lot : MonoBehaviour {
     public GameObject prefab;
     public Component[] list;
     public GameObject canvas;
+    public GameObject p1Win;
+    public GameObject p2Win;
+    public GameObject spacePlane;
     private bool hasWon = false;
 	// Use this for initialization
 	void Start () {
@@ -40,11 +43,23 @@ public class Parking_lot : MonoBehaviour {
             {
                 if (transform.tag == "Chantarelle" && !hasWon)
                 {
-                    canvas.SetActive(true);
+                    // canvas.SetActive(true);
                     GetComponent<AudioSource>().Play();
                     hasWon = true;
+                    spacePlane.GetComponent<MeshRenderer>().enabled = true;
 
                     Owner.GetComponent<PlayerBehavior>().hasWon = true;
+
+                    if (Owner.tag == "Player1")
+                    {
+                        p1Win.GetComponent<MeshRenderer>().enabled = true;
+                        GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerBehavior>().hasLost = true;
+                    }
+                    else if(Owner.tag == "Player2")
+                    {
+                        p2Win.GetComponent<MeshRenderer>().enabled = true;
+                        GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerBehavior>().hasLost = true;
+                    }
                 }
             }
         }
