@@ -24,6 +24,7 @@ public class PlayerBehavior : MonoBehaviour {
     private Vector3 lookdirection = new Vector3(1, 0, 1);
     public float gatheringSpeedModifier;
     public float m_defaultMoveSpeedModifier;
+    public bool m_canSearch = true;
     // Use this for initialization
     void Start ()
     {
@@ -142,7 +143,7 @@ public class PlayerBehavior : MonoBehaviour {
             {
                 isSearching = false;
             }
-            else if (!isSearching && isTouchingBush)
+            else if (!isSearching && isTouchingBush && m_canSearch)
             {
                 GameObject indi = Instantiate(searchIndicator, transform.position + new Vector3(0, 2, 0), new Quaternion(0, 0, 0, 0));
                 indi.transform.SetParent(transform);
@@ -226,6 +227,7 @@ public class PlayerBehavior : MonoBehaviour {
         if(mushroom.tag == "Chantarelle")
         {
             m_moveSpeedModifier = m_defaultMoveSpeedModifier * 0.8f;
+            m_canSearch = false;
         }
         if(mushroom.tag == "Amanita")
         {
