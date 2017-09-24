@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KGJ-JAM-MUSHROOM.Plugins", "KGJ-JAM-MUSHROOM.Plugins.csproj", "{D58FB66E-A006-B4F0-A5B4-E2CD2D4B8BDC}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KGJ-JAM-MUSHROOM", "KGJ-JAM-MUSHROOM.csproj", "{977DFA88-1D60-DD20-FCD7-3C279704F187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KGJ-JAM-MUSHROOM.Editor.Plugins", "KGJ-JAM-MUSHROOM.Editor.Plugins.csproj", "{79722CC4-EF64-8676-DBF5-169DEA4D2A97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D58FB66E-A006-B4F0-A5B4-E2CD2D4B8BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D58FB66E-A006-B4F0-A5B4-E2CD2D4B8BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D58FB66E-A006-B4F0-A5B4-E2CD2D4B8BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D58FB66E-A006-B4F0-A5B4-E2CD2D4B8BDC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{977DFA88-1D60-DD20-FCD7-3C279704F187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{977DFA88-1D60-DD20-FCD7-3C279704F187}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{977DFA88-1D60-DD20-FCD7-3C279704F187}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{977DFA88-1D60-DD20-FCD7-3C279704F187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79722CC4-EF64-8676-DBF5-169DEA4D2A97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79722CC4-EF64-8676-DBF5-169DEA4D2A97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79722CC4-EF64-8676-DBF5-169DEA4D2A97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79722CC4-EF64-8676-DBF5-169DEA4D2A97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
