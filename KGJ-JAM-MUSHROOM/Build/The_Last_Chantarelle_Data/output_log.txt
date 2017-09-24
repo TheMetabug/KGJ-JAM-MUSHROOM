@@ -1,0 +1,52 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 730 (ID=0x1287)
+    Vendor:   NVIDIA
+    VRAM:     1994 MB
+    Driver:   10.18.15.4279
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.038 seconds
+Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\tonilyy\Documents\GitHub\KGJ-JAM-MUSHROOM\KGJ-JAM-MUSHROOM\Build\The_Last_Chantarelle_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.996019 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1500 -> priority: 1 
+  Thread -> id: 245c -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.015771 ms
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1048.
+Total: 0.721892 ms (FindLiveObjects: 0.062185 ms CreateObjectMapping: 0.021629 ms MarkObjects: 0.243034 ms  DeleteObjects: 0.390236 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.833796 ms
+
+Unloading 167 unused Assets to reduce memory usage. Loaded Objects now: 353.
+Total: 3.774089 ms (FindLiveObjects: 0.053173 ms CreateObjectMapping: 0.048967 ms MarkObjects: 0.397746 ms  DeleteObjects: 3.272399 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.838152 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 353.
+Total: 0.483064 ms (FindLiveObjects: 0.044761 ms CreateObjectMapping: 0.040856 ms MarkObjects: 0.387532 ms  DeleteObjects: 0.009012 ms)
+
