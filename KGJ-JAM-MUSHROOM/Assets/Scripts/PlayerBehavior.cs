@@ -60,7 +60,7 @@ public class PlayerBehavior : MonoBehaviour {
         // up & down
         if (Input.GetKey(keyInputs[0]))
         {
-            dirVel.z += Time.deltaTime;
+            dirVel.z += Time.deltaTime * 2;
             if (dirVel.z >= 1)
             {
                 dirVel.z = 1;
@@ -73,7 +73,7 @@ public class PlayerBehavior : MonoBehaviour {
         }
         else if (Input.GetKey(keyInputs[2]))
         {
-            dirVel.z -= Time.deltaTime;
+            dirVel.z -= Time.deltaTime * 2;
             if (dirVel.z <= -1)
             {
                 dirVel.z = -1;
@@ -95,7 +95,7 @@ public class PlayerBehavior : MonoBehaviour {
         // left & right
         if (Input.GetKey(keyInputs[3]))
         {
-            dirVel.x += Time.deltaTime;
+            dirVel.x += Time.deltaTime * 2;
             if (dirVel.x >= 1)
             {
                 dirVel.x = 1;
@@ -108,7 +108,7 @@ public class PlayerBehavior : MonoBehaviour {
         }
         else if (Input.GetKey(keyInputs[1]))
         {
-            dirVel.x -= Time.deltaTime;
+            dirVel.x -= Time.deltaTime * 2;
             if (dirVel.x <= -1)
             {
                 dirVel.x = -1;
