@@ -25,10 +25,14 @@ public class PlayerBehavior : MonoBehaviour {
     public float gatheringSpeedModifier;
     public float m_defaultMoveSpeedModifier;
     public bool m_canSearch = true;
+    public Animator anim;
+    public bool hasWon = false;
     // Use this for initialization
     void Start ()
     {
-		if(gameObject.tag == "Player1")
+       anim  = gameObject.GetComponentInChildren<Animator>();
+
+        if (gameObject.tag == "Player1")
         {
             gatheringSpeedModifier = 1.0f;
             m_defaultMoveSpeedModifier = 1.0f;
@@ -44,22 +48,37 @@ public class PlayerBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (!isStunned)
+
+        if (hasWon)
         {
-            MovementControls();
+            anim.Play("Samba Dancing");
         }
-        MovementHandler();
-        m_moving = false;
+        else
+        {
+            if (!isStunned)
+            {
+                MovementControls();
+            }
+            MovementHandler();
+            m_moving = false;
+        }
     }
 
     private void MovementControls()
     {
+        if(dirVel == new Vector3(0,0,0))
+        {
+            anim.Play("Idle");
+        }
         const float minDirToLook = 0.25f;
         // Movement input
 
         // up & down
         if (Input.GetKey(keyInputs[0]))
         {
+            anim.Play("Walking (2)");
+            //anim.SetBool(1, true);
+
             dirVel.z += Time.deltaTime * 2;
             if (dirVel.z >= 1)
             {
@@ -73,6 +92,8 @@ public class PlayerBehavior : MonoBehaviour {
         }
         else if (Input.GetKey(keyInputs[2]))
         {
+            anim.Play("Walking (2)");
+
             dirVel.z -= Time.deltaTime * 2;
             if (dirVel.z <= -1)
             {
@@ -95,6 +116,8 @@ public class PlayerBehavior : MonoBehaviour {
         // left & right
         if (Input.GetKey(keyInputs[3]))
         {
+            anim.Play("Walking (2)");
+
             dirVel.x += Time.deltaTime * 2;
             if (dirVel.x >= 1)
             {
@@ -108,6 +131,8 @@ public class PlayerBehavior : MonoBehaviour {
         }
         else if (Input.GetKey(keyInputs[1]))
         {
+            anim.Play("Walking (2)");
+
             dirVel.x -= Time.deltaTime * 2;
             if (dirVel.x <= -1)
             {
@@ -121,6 +146,7 @@ public class PlayerBehavior : MonoBehaviour {
         }
         else
         {
+  
             dirVel.x = Vector3.Lerp(new Vector3(dirVel.x, 0, 0), Vector3.zero, Time.deltaTime * 5).x;
             if (Mathf.Abs(m_speed) < 0.15f)
             {
