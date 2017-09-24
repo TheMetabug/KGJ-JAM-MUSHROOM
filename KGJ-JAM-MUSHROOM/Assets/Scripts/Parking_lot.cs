@@ -43,6 +43,8 @@ public class Parking_lot : MonoBehaviour {
                     canvas.SetActive(true);
                     GetComponent<AudioSource>().Play();
                     hasWon = true;
+
+                    Owner.GetComponent<PlayerBehavior>().hasWon = true;
                 }
             }
         }

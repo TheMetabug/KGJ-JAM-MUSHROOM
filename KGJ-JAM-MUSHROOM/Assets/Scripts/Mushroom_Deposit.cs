@@ -35,7 +35,7 @@ public class Mushroom_Deposit : MonoBehaviour {
             if (prefab != null)
             {
                 other.GetComponent<PlayerBehavior>().getShroom(prefab);
-                Instantiate(prefab,other.transform.position + new Vector3(0,2,0),new Quaternion(0,0,0,0),other.transform);
+                Instantiate(prefab,other.transform.position + new Vector3(0,4,0),new Quaternion(0,0,0,0),other.transform);
             }
             searchTimer = 0;
         }

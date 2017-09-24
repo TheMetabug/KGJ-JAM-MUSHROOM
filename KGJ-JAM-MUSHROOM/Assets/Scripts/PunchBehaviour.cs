@@ -36,7 +36,7 @@ public class PunchBehaviour : MonoBehaviour {
                 {
                     col.GetComponent<PlayerBehavior>().m_canSearch = true;
                     GameObject chantarelle = GameObject.FindGameObjectsWithTag("Chantarelle")[0];
-                    chantarelle.transform.position = owner.transform.position + new Vector3(0, 2f, 0);
+                    chantarelle.transform.position = owner.transform.position + new Vector3(0, 4f, 0);
                     chantarelle.transform.SetParent(owner.transform);
                     owner.GetComponent<PlayerBehavior>().m_moveSpeedModifier = owner.GetComponent<PlayerBehavior>().m_defaultMoveSpeedModifier * 0.8f;
                     owner.GetComponent<PlayerBehavior>().m_canSearch = false;

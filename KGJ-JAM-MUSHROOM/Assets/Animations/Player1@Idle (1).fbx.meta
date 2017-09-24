@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d9a1ce5f5c2dda146b359c07eb76691b
+guid: 902cbf4130f9a2b4a8a71ed3bd9832cd
 timeCreated: 1506248092
 licenseType: Pro
 ModelImporter:
@@ -62,7 +62,8 @@ ModelImporter:
     100108: mixamorig:Spine
     100110: mixamorig:Spine1
     100112: mixamorig:Spine2
-    100114: //RootNode
+    100114: Player1
+    100116: //RootNode
     400000: mixamorig:Head
     400002: mixamorig:HeadTop_End
     400004: mixamorig:Hips
@@ -120,9 +121,12 @@ ModelImporter:
     400108: mixamorig:Spine
     400110: mixamorig:Spine1
     400112: mixamorig:Spine2
-    400114: //RootNode
+    400114: Player1
+    400116: //RootNode
+    4300000: Player1
     7400000: mixamo.com
     9500000: //RootNode
+    13700000: Player1
   materials:
     importMaterials: 1
     materialName: 0
